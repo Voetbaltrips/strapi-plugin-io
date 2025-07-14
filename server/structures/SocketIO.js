@@ -40,8 +40,6 @@ class SocketIO {
 		try {
 			const { createClient } = require('redis');
 
-			console.log('process.env.REDIS_URL', process.env.REDIS_URL)
-
 			const pubClient = createClient({
 				url: process.env.REDIS_URL || 'redis://localhost:6379'
 			});
